@@ -10,14 +10,16 @@ base_url = None
 
 
 def configure_request(app):
-    global api_key
+    global api_key, base_url
     api_key = app.config['NEWS_API_KEY']
-
+    base_url = app.config['NEWS_API_BASE_URL']
 
 def get_sources(source):
     """Function to retrieve news sources list from the News api"""
 
-    get_sources_url = 'https://newsapi.org/v1/sources'.format(source, api_key)
+    get_sources_url = base_url.format(source, api_key)
+    #get_sources_url = 'https://newsapi.org/v1/sources'.format(source, api_key)
+
     # get_sources_url = 'https://newsapi.org/v2/sources?apiKey=739aea22d2814f919546af28438d1048'
     with urllib.request.urlopen(get_sources_url) as url:
         get_sources_data = url.read()
