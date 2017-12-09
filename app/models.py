@@ -1,5 +1,5 @@
 class Sources:
-    """Sources class to define the news source object"""
+    """Sources class to define the news source objects"""
 
     def __init__(self, id, name, description, url, category, language, country):
         self.id = id
