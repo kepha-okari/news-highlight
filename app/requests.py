@@ -15,7 +15,9 @@ def configure_request(app):
     base_url = app.config['NEWS_API_BASE_URL']
 
 def get_sources(source):
-    """Function to retrieve news sources list from the News api"""
+    """
+    Function to retrieve news sources list from the News api
+    """
 
     get_sources_url = base_url.format(source, api_key)
     #get_sources_url = 'https://newsapi.org/v1/sources'.format(source, api_key)
@@ -54,3 +56,20 @@ def process_results(sources_list):
         sources_results.append(source_object)
 
     return sources_results
+
+
+def get_articles_general(article):
+    """Function to retrieve news sources list from the News api"""
+
+    get_articles_url = 'https://newsapi.org/v2/top-headlines?category=general&apiKey=d3f684e44cfa412aa3f3f932571b5618'
+    with urllib.request.urlopen(get_articles_url) as url:
+        get_articles_data = url.read()
+        get_articles_response = json.loads(get_articles_data)
+
+        articles_results = None
+
+        if get_articles_response['articles']:
+            articles_results_list = get_articles_response['articles']
+            articles_results = process_articles(articles_results_list)
+
+    return articles_results
