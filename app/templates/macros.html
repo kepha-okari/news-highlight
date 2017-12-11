@@ -1,32 +1,51 @@
 
 {% macro displaySourcesList(sources) %}
         {% for source in sources %}
-          <div class="col-sm-4">
-            <a href="{{source.url}}">
+          <div class="col-sm-4 col-md-4">
+            <a href='/articles/{{source.id}}'>
               <h3 style="font-weight:bold">{{ source.name}}</h3>
             </a>
             <br>
-            <div class="well" style="height:200px">
-                <p style="font-weight:bold">{{ source.description|truncate(200)}}</p>
+            <div class="well" style="height:100px; background-color:lightblue;">
+                <p style="font-weight:bold">{{ source.description|truncate(150)}}</p>
             </div>
-            <h4 style="font-weight:bold">CATEGORY: {{ source.category }} </h4><br>
           </div>
 
         {% endfor %}
 {% endmacro %}
 
-{% macro displayGeneralArticles(articles) %}
-        {% for article in articles %}
-          <div class="col-sm-4">
-            <img src="article.urlToImage" alt="Image">
-            <a href="{{article.url}}">
-              <h3 style="font-weight:bold">{{ article.title}}</h3>
+<!-- Display articles -->
+{% macro displayArticleList(article_list) %}
+    {% for article in article_list %}
+        <li>
+            <a href="{{article.urlToArticle}}">
+              <h1>
+                  {{article.title}}
+              </h1>
+              <h2>{{article.description}}</h2>
+              <img src='{{article.urlToImage}}'>
             </a>
-            <br>
-            <div class="well" style="height:200px">
-                <p style="font-weight:bold">{{ article.description|truncate(200)}}</p>
-            </div>
-          </div>
+        </li>
 
-        {% endfor %}
+        <!-- <div class="well col-xs-12 col-sm-12 col-md-12 col-lg-12 article-card">
+            <li class="text-center">
+                <h4>
+                    <small class="publish-date">{{article.publishedAt}}</small>
+                    <br>
+                    <a href="{{ article.urlToArticle }}" class="article-title">
+                        {{ article.title }}
+                    </a>
+                </h4>
+                <img src="{{ article.urlToImage }}" alt="{{ article.title }}" class="img-responsive article-image">
+                <p>
+                    <span class="article-description">
+                        {{ article.description }}
+                    </span>
+                    <br>
+                    <a href="{{ article.urlToArticle }}" class="article-link"> Read more...</a>
+                </p>
+            </li>
+        </div> -->
+    {% endfor %}
+
 {% endmacro %}
