@@ -20,12 +20,12 @@
     <!-- print source here -->
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-6">
               <li class="well" style="list-style:none;background-color:white;">
-                  <a href="{{article.urlToArticle}}"style="text-decoration:none;">
+                  <a href="{{article.url}}"style="text-decoration:none;">
                     <h3 style="font-size:16px;color:#ff5900;">
                         {{article.title}}
                     </h3>
                     <p style="font-size:12px; color:black;">{{article.description|truncate(70)}}</p>
-                    <a href="{{ article.urlToArticle }}" class="article-link" style="color:#ff5900;"> Read more...</a>
+                    <a href="{{ article.url }}" class="article-link" style="color:#ff5900;"> Read more...</a>
                     <img src='{{article.urlToImage}}' width="90%px" height="210px;">
 
               </li>
