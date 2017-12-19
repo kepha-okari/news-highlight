@@ -29,7 +29,7 @@ As a user I would like:
 
 * Click https://kepha-news-highlights.herokuapp.com/) <br/>
   or <br/>
-* Copy https://kepha-news-highlights.herokuapp.com/) and  Paste the link on your prefered browerser
+* Copy https://kepha-news-highlights.herokuapp.com/) and  Paste the link on your prefered browser
 
 This requires internet connection.
 
