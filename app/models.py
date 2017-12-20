@@ -11,22 +11,9 @@ class Sources:
 class Articles:
     """ Articles class to define the articles object """
 
-    def __init__(self, author, title, description, urlToImage, url, publishedAt):
+    def __init__(self, author, title, description, urlToImage, url):
         self.author = author
         self.title = title
         self.description = description
         self.urlToImage = urlToImage
         self.url = url
-        self.publishedAt = publishedAt
-
-    @classmethod
-    def publish_date_format(cls,publishedAt):
-        '''
-        Function that changes the format of the date from UTC to display-friendly format
-
-        Args:
-            publishedAt : The date for the article, in UTC (+0).
-        '''
-        date_to_display = publishedAt[:10]
-
-        return date_to_display

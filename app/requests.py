@@ -95,12 +95,9 @@ def process_articles(article_list):
         publishedAt = article_item.get('publishedAt')
 
         # if publishedAt != None:
-        #     #Call publish_date_format method to convert date to a display-friendly format
-        #     date_to_display = article_item.publish_date_format(publishedAt)
-        #     #date_to_display = Articles.publish_date_format(publishedAt)
-        #
-
-        article_object = Articles(source, title, description, urlToImage, urlToArticle, publishedAt)
+        #     # Call publish_date_format method to convert date to a display-friendly format
+        #     #date_to_display = article_item.publish_date_format(publishedAt) (self, author, title, description, urlToImage, url):
+        article_object = Articles(source, title, description, urlToImage, urlToArticle)
         article_results.append(article_object)
 
     return article_results
