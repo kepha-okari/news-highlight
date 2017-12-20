@@ -26,7 +26,7 @@
                     <h3 style="font-size:16px;color:#ff5900;">
                         {{article.title}}
                     </h3>
-                    {{article.publishedAt[:10]}}
+                     <p style="font-size:10px;">  Date: {{article.publishedAt[:10]}} </p>
                     <p style="font-size:12px; color:black;">{{article.description|truncate(70)}}</p>
                     <a href="{{ article.url }}" class="article-link" style="color:#ff5900;"> Read more...</a>
                     <img src='{{article.urlToImage}}' width="90%px" height="210px;">
