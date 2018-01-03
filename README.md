@@ -43,4 +43,4 @@ No known bugs
 
 ### License
 
-MIT(./LICENSE) (c) 2017 **[Kepha Okari](https://kepha-okari.github.io)**
+**[MIT](./LICENSE)** (c) 2017 **[Kepha Okari](https://kepha-okari.github.io)**
