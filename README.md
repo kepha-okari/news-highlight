@@ -25,13 +25,31 @@ As a user I would like:
 ## Prerequisites
 * Python3.6
 
-## Setup/Installation Requirements
-
+## How to use it
+* must have internet connection
 * Click https://kepha-news-highlights.herokuapp.com/) <br/>
   or <br/>
 * Copy https://kepha-news-highlights.herokuapp.com/) and  Paste the link on your prefered browser
 
-This requires internet connection.
+
+## Setup/Installation Requirements
+* internet access
+* git clone https://github.com/kepha-okari/news-highlight.git
+* $ cd news-highlights
+* $ python3.6 -m venv virtual (install virtual environment)
+* $ source virtual/bin/activate
+* $ python3.6 -m pip install -r requirements.txt (install all dependencies)
+* Inside the manage.py module change the config_name parameter from 'production' to 'development' ie app = create_app('production') should be app = create_app('development')
+* $ ./start.sh
+
+# CREDITS
+
+#### Google.com, StackOverflow.com and Miguel Grinberg -author of 'Flask Web Development'
+
+
+# Support and Contacts
+
+In case You have any issues using this code please do no hesitate to get in touch with me through kephaokari@gmail.com or leave a commit here on github.
 
 ## Known Bugs
 
@@ -40,6 +58,7 @@ No known bugs
 ## Technologies Used
 - Python3.6
 - Flask framework
+- Bootstrap
 
 ### License
 
